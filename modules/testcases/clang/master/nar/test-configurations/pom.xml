@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <!--
+     *  ΙΔΕΑ : THE TESTSUITE TO DEVELOP TESTS AGAINST INFINITE NUMBER OF SOFTWARE PROJECT VERSIONS
+    -->
+
+    <parent>
+        <groupId>org.jboss</groupId>
+        <artifactId>nar-additional-testsuite-narTestsuite</artifactId>
+        <version>1.0.0.Final-SNAPSHOT</version>
+
+
+    </parent>
+
+    <artifactId>nar-additional-testsuite-narTestsuite-configuration</artifactId>
+    <name>nar-additional-testsuite: narTestsuite : configuration</name>
+    <packaging>nar</packaging>
+
+    <build>
+
+ 
+	 <plugins>  
+		            
+            <plugin>
+		<groupId>com.github.maven-nar</groupId>
+		<artifactId>nar-maven-plugin</artifactId>
+		<version>3.5.1</version>
+		<extensions>true</extensions>
+                <configuration>
+		  <libraries>
+		    <library>
+		      <type>executable</type>
+		      <run>true</run>
+		    </library>
+		  </libraries>
+		</configuration>
+	    </plugin>
+        </plugins>
+	
+    </build>
+
+</project>

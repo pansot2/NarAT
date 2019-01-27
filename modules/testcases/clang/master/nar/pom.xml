@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <!--
+     *  ΙΔΕΑ : THE TESTSUITE TO DEVELOP TESTS AGAINST INFINITE NUMBER OF SOFTWARE PROJECT VERSIONS
+    -->
+
+    <parent>
+        <groupId>org.jboss</groupId>
+        <artifactId>nar-additional-testsuite-master</artifactId>
+        <version>1.0.0.Final-SNAPSHOT</version>
+    </parent>
+
+    <artifactId>nar-additional-testsuite-narTestsuite</artifactId>
+    <packaging>pom</packaging>
+    <name>nar-additional-testsuite : narTestsuite</name>
+
+            
+    <modules>
+        <module>test-configurations</module>
+    </modules>
+
+    <build>
+        <plugins>  
+
+            <plugin>
+                <groupId>org.codehaus.mojo</groupId>
+                <artifactId>build-helper-maven-plugin</artifactId>
+                <version>1.10</version>
+                <executions>
+                    <execution>
+                        <id>add-source</id>
+                        <phase>generate-sources</phase>
+                        <goals>
+                            <goal>add-source</goal>
+                        </goals>
+                        <configuration>
+                            <sources>
+                                <source>${basedir}/../src/main/c</source>
+                            </sources>
+                        </configuration>
+                    </execution>
+                </executions>
+            </plugin>
+
+        </plugins>
+    </build>
+
+</project>
